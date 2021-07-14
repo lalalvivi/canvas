@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Canvas</title>
+  </head>
+  <script type="text/javascript" src="../画布/canvas.js">
+  </script>
+  <body>
+    <div class="all">
+      <div class="left">
+        <button type="button" onclick="rect()">绘制矩形</button>
+        <button type="button" onclick="tangle()">绘制三角形</button>
+        <button type="button" onclick="line()">绘制线条</button>
+        <button type="button" onclick="arc()">绘制圆弧</button>
+        <button type="button" onclick="quadratic()">绘制二次贝塞尔曲线</button>
+        <button type="button" onclick="bezier()">绘制三次贝塞尔曲线</button>
+        <button type="button">绘制Path</button>
+        <button type="button">绘制SVGPath</button>
+        <input type="text" id="text" placeholder="输入文字" value=""></input>
+        <button type="button" onclick="text()">添加文字</button>
+        <input type="text" id="img" placeholder="输入图片地址" value=""></input>
+        <button type="button" onclick="img()">添加图片</button>
+        <div>图片缩放</div>
+        <input  id="scaleSlider" type="range" min="0.1" max="3" value="1" step="0.1"  />
+        <div>切片x</div>
+        <input  id="sliderx" type="range" min="0" max="600" value="1" step="0.1"  />
+        <div>切片y</div>
+        <input  id="slidery" type="range" min="0" max="600" value="1" step="0.1"  />
+        <div>原点坐标x</div>
+        <input  id="sliderx1" type="range" min="0" max="600" value="1" step="0.1"  />
+        <div>原点坐标y</div>
+        <input  id="slidery1" type="range" min="0" max="600" value="1" step="0.1"  />
+      </div>
+      <div class="right">
+        <button type="button" onclick="clearAll()">清除画布</button>
+        <div style="display:flex;flex-wrap: wrap">
+          <div>缩放：</div>
+        <input  id="scale" type="range" min="0.1" max="3" value="1" step="0.1"  />
+          <div>旋转：</div>
+        <input  id="rotate" type="range" min="0" max="90" value="1" step="0.1"  />
+          <div>透明度：</div>
+        <input  id="alpha" type="range" min="0" max="1" value="1" step="0.1"  /> 
+        <div>颜色：</div>
+        <input  id="color" type="text"  value=""  />  
+        <div>渐变颜色：</div>
+        <input  id="gladColor" type="text"   />  
+        <div>线条宽度：</div>
+        <input  id="lineWidth" type="number" value="1"  min="0.1" max="10" />  
+        <div>线条末端样式：</div>
+        <select id="lineCap">
+          <option value="butt">默认</option>
+          <option value="round">圆形 </option>
+          <option value="square">方形</option>
+        </select>
+        <div>线条间接合处：</div>
+        <select id="lineJoin">
+          <option value="round">磨圆</option>
+          <option value="bevel">磨平 </option>
+          <option value="miter">尖角</option>
+        </select>
+        <div>阴影模糊：</div>
+        <input  id="shadowBlur" type="number" value="0"  min="0" max="10" />  
+        <div>阴影颜色：</div>
+        <input  id="shadowColor" type="text" value=""  />  
+        <div>阴影偏移x：</div>
+        <input  id="shadowOffsetX" type="number" value="0"  min="0" max="10" />  
+        <div>阴影偏移y：</div>
+        <input  id="shadowOffsetY" type="number" value="0"  min="0" max="10" />  
+        <button type="button" onclick="sure()">确认</button>
+      </div>
+        <canvas id="canvas" width="800" height="800"></canvas>
+      </div>
+    </div>
+  </body>
+
+  <style type="text/css">
+  @import url("../画布/canvas.css");
+  </style>
+</html>
